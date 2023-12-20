@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 '''
     Function
     common_elements - Function that returns a set of common
