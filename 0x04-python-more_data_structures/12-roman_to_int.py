@@ -13,6 +13,7 @@
 
 
 def roman_to_int(roman_string):
+    # check If the roman_string is not a string or None
     if type(roman_string) is not str or roman_string is None:
         return (0)
     roman_num_value = {
@@ -21,7 +22,9 @@ def roman_to_int(roman_string):
             }
     result = 0
     prev = 0
+    # loop in reverse
     for alpha in reversed(roman_string):
+        # loop the dictionary and break out once key matches alpha
         for key, value in roman_num_value.items():
             if key == alpha:
                 if value < prev:
