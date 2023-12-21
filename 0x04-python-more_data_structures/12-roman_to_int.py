@@ -21,11 +21,11 @@ def roman_to_int(roman_string):
             }
     result = 0
     prev = 0
-    for alpha in roman_string:
+    for alpha in reversed(roman_string):
         for key, value in roman_num_value.items():
             if key == alpha:
-                if value > prev:
-                    result = value - result
+                if value < prev:
+                    result -= value
                 else:
                     result += value
                 prev = value
