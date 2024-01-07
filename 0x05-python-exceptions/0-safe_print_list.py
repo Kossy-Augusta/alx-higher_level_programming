@@ -1,4 +1,4 @@
-#!/us/bin/python3
+#!/usr/bin/python3
 
 '''
     safe_print_list - function that prints x elements of a list
