@@ -11,9 +11,9 @@ Return: value of the division, otherwise: None
 
 def safe_print_division(a, b):
     try:
-        result = a / b
+        value = a / b
     except ZeroDivisionError:
-        result = None
+        value = None
     finally:
-        print("Insisde result: {}".format(result))
-        return result
+        print("Insisde result: {}".format(value))
+        return value
