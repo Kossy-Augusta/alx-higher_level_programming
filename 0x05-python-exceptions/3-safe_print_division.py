@@ -12,7 +12,7 @@ Return: value of the division, otherwise: None
 def safe_print_division(a, b):
     try:
         result = a / b
-    except Exception:
+    except ZeroDivisionError:
         result = None
     finally:
         print("Insisde result: {}".format(result))
