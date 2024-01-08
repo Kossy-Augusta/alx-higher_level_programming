@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 '''
 list_division - Function that divides element by element 2 lists.
 @my_list_1: first list
