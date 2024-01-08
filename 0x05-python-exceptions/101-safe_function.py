@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+
 '''
 safe_function - function that executes a function safely.
 @fct: pointer to a function
@@ -12,7 +13,8 @@ Return: result of the function fct otherwise return None if an exception \
 
 def safe_function(fct, *args):
     try:
-        return(fct(*args))
+        result = fct(*args)
+        return(result)
     except Exception as err:
         print("Exception: {}".format(err), file=sys.stderr)
         return (None)
