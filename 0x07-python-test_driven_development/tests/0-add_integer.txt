@@ -44,3 +44,19 @@ If both arguments are non-int or non-float, TypeError is raised with the error m
 	>>> add_integer('we', 'THe')
 	Traceback (most recent call last):
 	TypeError: a must be an integer
+
+If infinity is provided, function will fail
+
+::
+
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+For NaN numbers
+
+::
+
+	>>> add_integer(float('nan'), 2)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
