@@ -1,0 +1,46 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integar``
+---------------------
+
+This is an 0-add_integer text file in reStructuredText format.
+First import the ``add_integer`` from the 0-add_integer module:
+add_integar() is a function that adds two integars
+
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+	>>> add_integer(-1, -2)
+	-3
+
+The function also accespts flaoting numbers and casts it to an int befor operation.
+
+::
+
+	>>> add_integer(2.3, 2.3)
+	4
+	>>> add_integer(3, 4.5)
+	7
+
+The second parameter is set to 98 by default.
+::
+	>>> add_integer(1)
+	99
+
+when non data types othere than float or int is input, it throws a TypeError
+::
+	>>> add_integer('we', 5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(5, 'the')
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+If both arguments are non-int or non-float, TypeError is raised with the error message printed for the first
+::
+	>>> add_integer('we', 'THe')
+	Traceback (most recent call last):
+	TypeError: a must be an integer
